@@ -1,11 +1,25 @@
-const express = require('express'); //prendo la libreria che ho installato per usarla
-const app = express(); //creo app
+require('dotenv').config();
+const express = require('express');
+const mongoose = require('mongoose');
+const productRoutes = require('./routes/productRoutes');
+
+const app = express();
 const PORT = 3000;
 
-app.get('/', (req, res) => { 
-  res.send('Il server di ShopDemo funziona correttamente!');
-}); //quando si visita la homepage (/) rispondi con questo messaggio
+app.use(express.json());
+app.use('/api/products', productRoutes);
 
-app.listen(PORT, () => {
-  console.log(`Server avviato su http://localhost:${PORT}`);
-}); //accendo il server e lo faccio ascoltare sulla porta 3000. quando parte stampa messaggio
+app.get('/', (req, res) => {
+  res.send('Il server di ShopDemo funziona!');
+});
+
+mongoose.connect(process.env.MONGO_URI)
+  .then(() => {
+    console.log('Connesso a MongoDB!');
+    app.listen(PORT, () => {
+      console.log(`Server avviato su http://localhost:${PORT}`);
+    });
+  })
+  .catch((err) => {
+    console.error('Errore di connessione a MongoDB:', err.message);
+  });
