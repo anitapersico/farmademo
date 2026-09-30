@@ -1,3 +1,4 @@
+import AdminPanel from './components/AdminPanel';
 import { useState, useEffect } from 'react';
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import ProductCard from './components/ProductCard';
@@ -54,10 +55,13 @@ function App() {
           <h1><Link to="/">ShopDemo</Link></h1>
           <nav>
             {isLoggedIn ? (
+              <>
+              <Link to="/admin">Admin</Link>
               <button onClick={handleLogout}>Logout</button>
+              </>
             ) : (
               <Link to="/login">Login</Link>
-            )}
+          )}
           </nav>
         </header>
 
@@ -68,6 +72,7 @@ function App() {
           />
           <Route path="/login" element={<Login onLoginSuccess={() => setIsLoggedIn(true)} />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/admin" element={<AdminPanel />} />
         </Routes>
       </div>
     </BrowserRouter>
