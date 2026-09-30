@@ -1,0 +1,100 @@
+.App {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.product-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: left;
+}
+
+.price {
+  font-weight: bold;
+  color: #333;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.cart-info {
+  font-weight: bold;
+  background: #f0f0f0;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+}
+
+.product-card button {
+  margin-top: 0.5rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  background: #333;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.product-card button:hover {
+  background: #555;
+}
+
+nav a, nav button {
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+  background: none;
+  border: 1px solid #333;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+}
+
+.header h1 a {
+  color: #333;
+  text-decoration: none;
+}
+
+.auth-form {
+  max-width: 350px;
+  margin: 3rem auto;
+  text-align: left;
+}
+
+.auth-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.auth-form input {
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.auth-form button {
+  padding: 0.6rem;
+  background: #333;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.error { color: #c0392b; }
+.success { color: #27ae60; }

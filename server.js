@@ -3,11 +3,13 @@ const express = require('express');
 const mongoose = require('mongoose');
 const productRoutes = require('./routes/productRoutes');
 const authRoutes = require('./routes/authRoutes');
+const cors = require('cors')
 
 const app = express();
 const PORT = 3000;
 
 app.use(express.json());
+app.use(cors())
 app.use('/api/products', productRoutes);
 app.use('/api/auth', authRoutes);
 
