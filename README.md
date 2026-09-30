@@ -25,10 +25,6 @@ Un e-commerce full-stack per una parafarmacia online, sviluppato come progetto d
 - React Router per la navigazione
 - CSS puro con animazioni personalizzate (nessuna libreria UI esterna)
 
-## 📸 Screenshot
-
-*(Aggiungi qui 2-3 screenshot del sito: home, carrello, pannello admin)*
-
 ## 🚀 Installazione e avvio in locale
 
 ### Prerequisiti
