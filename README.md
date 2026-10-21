@@ -65,18 +65,18 @@ Il frontend sarà disponibile su `http://localhost:5173`
 
 ## 📁 Struttura del progetto
 
-\`\`\`
+```
 farmademo/
-├── controllers/       # Logica delle richieste (prodotti, autenticazione)
+├── controllers/        # Logica delle richieste (prodotti, autenticazione)
 ├── models/             # Schemi MongoDB (Product, User)
 ├── routes/             # Definizione degli endpoint API
-├── middleware/          # Middleware di autenticazione JWT
-├── server.js            # Entry point del backend
-└── client/              # Applicazione React
+├── middleware/         # Middleware di autenticazione JWT
+├── server.js           # Entry point del backend
+└── client/             # Applicazione React
     └── src/
-        ├── components/   # Componenti React (ProductCard, Cart, AdminPanel, ecc.)
-        └── App.jsx        # Componente principale e routing
-\`\`\`
+        ├── components/ # Componenti React (ProductCard, Cart, AdminPanel, ecc.)
+        └── App.jsx     # Componente principale e routing
+```
 
 ## 🔌 API principali
 
